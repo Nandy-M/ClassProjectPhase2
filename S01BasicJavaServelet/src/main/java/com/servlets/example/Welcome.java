@@ -17,32 +17,27 @@ import javax.servlet.http.HttpSession;
 public class Welcome extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public Welcome() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	
 		PrintWriter out=response.getWriter();
 		response.setContentType("text/html");
-		HttpSession session=request.getSession();
+		
+		HttpSession session=request.getSession();//using session,we recognize the user
 		String username=(String)session.getAttribute("username");
-		out.println("Welcome User"+username);
+		
+		out.println("Welcome User "+ username);
 		out.println("<a href='Logout'>Logout</a>");
 	}
 

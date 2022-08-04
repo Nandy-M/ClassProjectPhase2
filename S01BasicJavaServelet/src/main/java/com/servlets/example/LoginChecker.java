@@ -31,18 +31,20 @@ public class LoginChecker extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		
 		String username=request.getParameter("textUsername");
 		String password=request.getParameter("textPassword");
+		
 		PrintWriter out=response.getWriter();
 		//RequestDispatcher- an interface to include content on same page or different pages
 		RequestDispatcher rd;
 		if(username.equalsIgnoreCase("Nandhini") && password.equals("123")){
-			//session object is created by web container and generate sessionid
+			//session object is created by web container and generate session id
 			HttpSession session=request.getSession(true);//create a new object and store its reference in session object
 			session.setAttribute("username", username);
 			
-			rd=request.getRequestDispatcher("Welcome");
+			rd=request.getRequestDispatcher("Welcome");// request will send to welcome servlet using request dispatcher
 			rd.forward(request, response);
 		}
 		else {
