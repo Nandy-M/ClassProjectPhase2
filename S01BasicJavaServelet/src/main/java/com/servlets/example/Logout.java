@@ -20,19 +20,20 @@ public class Logout extends HttpServlet {
    
     public Logout() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		PrintWriter out=response.getWriter();  
 		HttpSession session=request.getSession();
 		session.invalidate();//delete session
-		PrintWriter out=response.getWriter();  
-		out.print("You are successfully logged out!");  
+		
+		out.println("You are successfully logged out!"); 
 		response.sendRedirect(request.getContextPath() + "/LoginForm.html");
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

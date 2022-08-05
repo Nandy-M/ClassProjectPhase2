@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="S03UserWebApp" path="/S03UserWebApp" reloadable="true" source="org.eclipse.jst.jee.server:S03UserWebApp"/><Context docBase="S01BasicJavaServelet" path="/S01BasicJavaServelet" reloadable="true" source="org.eclipse.jst.jee.server:S01BasicJavaServelet"/><Context docBase="S04UserLoginProject" path="/S04UserLoginProject" reloadable="true" source="org.eclipse.jst.jee.server:S04UserLoginProject"/><Context docBase="S05ListenerDemo" path="/S05ListenerDemo" reloadable="true" source="org.eclipse.jst.jee.server:S05ListenerDemo"/></Host>
+      <Context docBase="S03UserWebApp" path="/S03UserWebApp" reloadable="true" source="org.eclipse.jst.jee.server:S03UserWebApp"/><Context docBase="S01BasicJavaServelet" path="/S01BasicJavaServelet" reloadable="true" source="org.eclipse.jst.jee.server:S01BasicJavaServelet"/><Context docBase="S04UserLoginProject" path="/S04UserLoginProject" reloadable="true" source="org.eclipse.jst.jee.server:S04UserLoginProject"/><Context docBase="S05ListenerDemo" path="/S05ListenerDemo" reloadable="true" source="org.eclipse.jst.jee.server:S05ListenerDemo"/><Context docBase="S06SessionManagement" path="/S06SessionManagement" reloadable="true" source="org.eclipse.jst.jee.server:S06SessionManagement"/><Context docBase="S07JSPBasics" path="/S07JSPBasics" reloadable="true" source="org.eclipse.jst.jee.server:S07JSPBasics"/></Host>
     </Engine>
   </Service>
 </Server>
