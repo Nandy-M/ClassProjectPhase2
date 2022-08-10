@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="P04Jspproductinfo">
+        
+    <wb-module deploy-name="PO4JspShowProductDetails">
+                
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <property name="context-root" value="P04Jspproductinfo"/>
-        <property name="java-output-path" value="/P04Jspproductinfo/build/classes"/>
+                
+        <property name="java-output-path" value="/PO4JspShowProductDetails/build/classes"/>
+        <property name="context-root" value="PO4JspShowProductDetails"/>
+            
     </wb-module>
+    
 </project-modules>
